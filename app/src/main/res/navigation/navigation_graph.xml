@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation_graph"
+            app:startDestination="@id/logInFragment">
+    <fragment
+            android:id="@+id/logInFragment"
+            android:name="com.example.login.fragments.LogInFragment"
+            tools:layout="@layout/fragment_login">
+        <action
+                android:id="@+id/logInFragmentAction"
+                app:destination="@id/registerFragment"
+        />
+        <action
+                android:id="@+id/resetPasswordFragmentAction"
+                app:destination="@id/resetPasswordFragment"
+        />
+        <action
+            android:id="@+id/requestAction"
+            app:destination="@+id/requestFragment"
+        />
+    </fragment>
+
+    <fragment android:id="@+id/registerFragment"
+              android:name="com.example.login.fragments.RegisterFragment"
+              tools:layout="@layout/fragment_register"
+    >
+        <action
+            android:id="@+id/registerFragmentAction"
+            app:destination="@id/userFragment"
+        />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.login.fragments.UserFragment"
+        tools:layout ="@layout/fragment_user"
+    >
+        <argument
+                android:name="user"
+                app:argType="com.example.login.models.RegisterUser"
+        >
+        </argument>
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.example.login.fragments.ResetPasswordFragment"
+        tools:layout="@layout/fragment_reset_password"
+    >
+    </fragment>
+
+    <fragment android:id="@+id/requestFragment"
+              android:name="com.example.login.fragments.RequestFragment"
+              tools:layout="@layout/fragment_request"
+    >
+    </fragment>
+
+</navigation>

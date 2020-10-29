@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_activity_padding"> 16dp</dimen>
+    <dimen name="button_bottom_margin">20dp</dimen>
+    <dimen name="button_primary_height">55dp</dimen>
+
+    <dimen name="profile_picture_height">300dp</dimen>
+    
+    <dimen name="reset_pass_image_size">100dp</dimen>
+
+    <dimen name="gentle_margin">8dp</dimen>
+
+    <dimen name="progress_bar">50dp</dimen>
+
+</resources>
